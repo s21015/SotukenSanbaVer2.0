@@ -7,6 +7,8 @@
     tools:context=".MainActivity">
 
     <!--背景画像-->
+
+    <!--ヘッダーのコード-->
     <ImageView
         android:id="@+id/background"
         android:layout_width="wrap_content"
@@ -15,12 +17,13 @@
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/header"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/backgroud"
         tools:ignore="ImageContrastCheck" />
 
-    <!--ヘッダーのコード-->
     <ImageView
         android:id="@+id/header"
         android:layout_width="0dp"
@@ -107,5 +110,31 @@
         app:layout_constraintStart_toEndOf="@+id/cameraBtn"
         app:layout_constraintTop_toTopOf="@+id/footer"
         tools:ignore="ImageContrastCheck" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="626dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="626dp" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline"
+        app:navGraph="@navigation/nav" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
