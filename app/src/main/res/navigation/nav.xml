@@ -11,7 +11,7 @@
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
-            android:id="@+id/action_mainFragment_to_illustratedFragment"
+            android:id="@+id/mainToillustarated"
             app:destination="@id/illustratedFragment" />
     </fragment>
     <fragment
