@@ -10,4 +10,8 @@
     <string name="optionBackgorund">設定ボタンの背景画像</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="animalButton">動物ボタン</string>
+    <string name="plantButton">植物ボタン</string>
+    <string name="weartherButton">天気ボタン</string>
+    <string name="buildingButton">建物ボタン</string>
 </resources>

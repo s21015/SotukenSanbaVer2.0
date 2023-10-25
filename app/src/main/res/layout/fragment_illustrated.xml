@@ -1,14 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".IllustratedFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ImageButton
+        android:id="@+id/animalBtn"
+        android:layout_width="155dp"
+        android:layout_height="180dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/animalButton"
+        android:scaleType="centerCrop"
+        android:src="@drawable/animal"
+        app:layout_constraintBottom_toTopOf="@+id/weatherBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/plantBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck" />
 
-</FrameLayout>
+    <ImageButton
+        android:id="@+id/plantBtn"
+        android:layout_width="155dp"
+        android:layout_height="180dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/plantButton"
+        android:scaleType="centerCrop"
+        android:src="@drawable/plant"
+        app:layout_constraintBottom_toTopOf="@+id/buildingBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/animalBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/weatherBtn"
+        android:layout_width="155dp"
+        android:layout_height="180dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/weartherButton"
+        android:scaleType="centerCrop"
+        android:src="@drawable/weather"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buildingBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/animalBtn"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/buildingBtn"
+        android:layout_width="155dp"
+        android:layout_height="180dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/buildingButton"
+        android:scaleType="centerCrop"
+        android:src="@drawable/building"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/weatherBtn"
+        app:layout_constraintTop_toBottomOf="@+id/plantBtn"
+        tools:ignore="ImageContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
