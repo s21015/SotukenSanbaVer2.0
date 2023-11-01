@@ -19,8 +19,7 @@
             android:name=".Splash"
             android:exported="true"
             android:label="@string/title_activity_splash"
-            android:theme="@style/Theme.Design.NoActionBar"
-            android:icon="">
+            android:theme="@style/Theme.Design.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,7 +28,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
