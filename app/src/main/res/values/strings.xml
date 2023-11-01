@@ -14,4 +14,5 @@
     <string name="plantButton">植物ボタン</string>
     <string name="weartherButton">天気ボタン</string>
     <string name="buildingButton">建物ボタン</string>
+    <string name="animalScroll">動物画面のスクロールビュー</string>
 </resources>
