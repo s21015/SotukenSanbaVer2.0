@@ -102,7 +102,7 @@
         android:id="@+id/optionBtn"
         android:layout_width="110dp"
         android:layout_height="78dp"
-        android:background="@drawable/option"
+        android:background="@drawable/add"
         android:contentDescription="@string/illustratedText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
