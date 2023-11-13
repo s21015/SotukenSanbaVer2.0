@@ -20,53 +20,53 @@
             android:layout_height="wrap_content">
 
             <ImageButton
-                android:id="@+id/imageButton2"
+                android:id="@+id/ryukyukenBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:background="#00FFFFFF"
                 android:src="@drawable/ryukyuken"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+                app:layout_constraintEnd_toStartOf="@+id/iriomoteyamanekoBtn"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/imageButton3"
+                android:id="@+id/iriomoteyamanekoBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#00FFFFFF"
                 android:src="@drawable/iriomoteyamaneko"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/imageButton2"
-                app:layout_constraintTop_toTopOf="@+id/imageButton2" />
+                app:layout_constraintStart_toEndOf="@+id/ryukyukenBtn"
+                app:layout_constraintTop_toTopOf="@+id/ryukyukenBtn" />
 
             <ImageButton
-                android:id="@+id/imageButton4"
+                android:id="@+id/kanahebiBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:background="#00FFFFFF"
                 android:src="@drawable/kanahebi"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton5"
+                app:layout_constraintEnd_toStartOf="@+id/kinoboritokageBtn"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+                app:layout_constraintTop_toBottomOf="@+id/ryukyukenBtn" />
 
             <ImageButton
-                android:id="@+id/imageButton5"
+                android:id="@+id/kinoboritokageBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#00FFFFFF"
                 android:src="@drawable/kinoboritokage"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/imageButton4"
-                app:layout_constraintTop_toTopOf="@+id/imageButton4" />
+                app:layout_constraintStart_toEndOf="@+id/kanahebiBtn"
+                app:layout_constraintTop_toTopOf="@+id/kanahebiBtn" />
 
             <ImageButton
-                android:id="@+id/imageButton6"
+                android:id="@+id/yanbarukuinaBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -75,7 +75,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/imageButton7"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+                app:layout_constraintTop_toBottomOf="@+id/kanahebiBtn" />
 
             <ImageButton
                 android:id="@+id/imageButton7"
@@ -85,8 +85,8 @@
                 android:src="@drawable/ryukyuken"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/imageButton6"
-                app:layout_constraintTop_toTopOf="@+id/imageButton6" />
+                app:layout_constraintStart_toEndOf="@+id/yanbarukuinaBtn"
+                app:layout_constraintTop_toTopOf="@+id/yanbarukuinaBtn" />
 
             <ImageButton
                 android:id="@+id/imageButton9"
@@ -98,7 +98,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/imageButton10"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
+                app:layout_constraintTop_toBottomOf="@+id/yanbarukuinaBtn" />
 
             <ImageButton
                 android:id="@+id/imageButton10"
