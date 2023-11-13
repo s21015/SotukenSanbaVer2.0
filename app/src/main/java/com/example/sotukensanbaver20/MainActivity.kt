@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.illustratedBtn.setOnClickListener {
             val navController = findNavController(R.id.fragmentContainerView)
-            navController.navigate(R.id.mainToillustarated)
+            navController.navigate(R.id.illustratedFragment)
 
 //              動物画面確認用
 //            navController.navigate(R.id.action_mainFragment_to_animalFragment)
