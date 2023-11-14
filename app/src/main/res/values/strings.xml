@@ -5,6 +5,7 @@
     <string name="headerBackground">ヘッダーの背景画像</string>
     <string name="headerTitle">ヘッダーのタイトル</string>
     <string name="illustratedText">ずかん</string>
+    <string name="animalText">どうぶつ</string>
     <string name="footerBackground">フッターの背景画像</string>
     <string name="illustratedBackgound">図鑑ボタンの背景画像</string>
     <string name="optionBackgorund">設定ボタンの背景画像</string>
