@@ -29,4 +29,11 @@
     <string name="tap_btn">タップ</string>
     <string name="insectButton">虫ボタン</string>
     <string name="otherButton">その他ボタン</string>
+    <string name="namedHint">なまえをきめてね</string>
+    <string name="selectKinds">しゅるいをえらんでね</string>
+    <string name="miniOtherBtn">小さいその他ボタン</string>
+    <string name="miniInsectBtn">小さい虫ボタン</string>
+    <string name="miniAnimalBtn">小さい動物ボタン</string>
+    <string name="miniPlantBtn">小さい植物ボタン</string>
+    <string name="nextBtn">次へボタン</string>
 </resources>
