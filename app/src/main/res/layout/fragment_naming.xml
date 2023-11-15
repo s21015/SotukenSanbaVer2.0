@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#75D9D9D9"
+    tools:context=".namingFragment">
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/namedHint"
+        android:inputType="text"
+        android:textColorHint="#757575"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/selectKinds"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
+    <ImageButton
+        android:id="@+id/miniOtherBtn"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:contentDescription="@string/miniOtherBtn"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mini_other"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/miniInsectBtn"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/miniInsectBtn"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:contentDescription="@string/miniInsectBtn"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mini_insect"
+        app:layout_constraintEnd_toStartOf="@+id/miniOtherBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/miniPlantBtn"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageButton
+        android:id="@+id/miniPlantBtn"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:contentDescription="@string/miniPlantBtn"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mini_plant"
+        app:layout_constraintEnd_toStartOf="@+id/miniInsectBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/miniAnimalBtn"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageButton
+        android:id="@+id/miniAnimalBtn"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:contentDescription="@string/miniAnimalBtn"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mini_animal"
+        app:layout_constraintEnd_toStartOf="@+id/miniPlantBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageButton
+        android:id="@+id/nextBtn"
+        android:layout_width="132dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="32dp"
+        android:background="@null"
+        android:contentDescription="@string/nextBtn"
+        android:scaleType="centerCrop"
+        android:src="@drawable/next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/miniPlantBtn"
+        tools:ignore="ImageContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
