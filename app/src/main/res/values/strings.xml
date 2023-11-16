@@ -37,4 +37,5 @@
     <string name="miniPlantBtn">小さい植物ボタン</string>
     <string name="nextBtn">次へボタン</string>
     <string name="detailTxt">とくちょうをかいてね</string>
+    <string name="tap_text">タップしてスタート！</string>
 </resources>
