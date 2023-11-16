@@ -11,6 +11,7 @@ import com.example.sotukensanbaver20.databinding.ActivityCameraBinding
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+import androidx.navigation.findNavController
 
 class CameraActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCameraBinding

@@ -31,18 +31,5 @@
         android:name="com.example.sotukensanbaver20.animalFragment"
         android:label="fragment_animal"
         tools:layout="@layout/fragment_animal" />
-    <fragment
-        android:id="@+id/namingFragment"
-        android:name="com.example.sotukensanbaver20.namingFragment"
-        android:label="fragment_naming"
-        tools:layout="@layout/fragment_naming" >
-        <action
-            android:id="@+id/action_namingFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/detailFragment"
-        android:name="com.example.sotukensanbaver20.detailFragment"
-        android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+
 </navigation>

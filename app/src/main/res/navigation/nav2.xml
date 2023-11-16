@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav2"
+    app:startDestination="@id/namingFragment">
+    <fragment
+        android:id="@+id/namingFragment"
+        android:name="com.example.sotukensanbaver20.namingFragment"
+        android:label="fragment_naming"
+        tools:layout="@layout/fragment_naming" >
+        <action
+            android:id="@+id/namingToDetail"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.sotukensanbaver20.detailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
+</navigation>
