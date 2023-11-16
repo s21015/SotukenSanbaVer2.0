@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#75D9D9D9"
+    android:background="#B3D9D9D9"
     tools:context=".namingFragment">
 
     <ImageButton
@@ -24,19 +24,19 @@
 
     <EditText
         android:id="@+id/detailText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="280dp"
+        android:layout_height="200dp"
         android:layout_marginTop="16dp"
-        android:background="#ffffff"
+        android:autofillHints=""
+        android:background="@drawable/naming_corners"
         android:ems="10"
-        android:gravity="start|top"
+        android:gravity="center"
         android:hint="@string/detailTxt"
         android:inputType="textMultiLine"
         android:minHeight="48dp"
         android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
