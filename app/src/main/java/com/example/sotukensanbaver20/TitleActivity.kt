@@ -12,7 +12,7 @@ class TitleActivity : AppCompatActivity() {
         binding = ActivityTitleBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.imageButton.setOnClickListener {
+        binding.btnTap.setOnClickListener {
             val intent = Intent(application, MainActivity::class.java)
             startActivity(intent)
         }
