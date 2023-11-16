@@ -15,25 +15,21 @@ class IllustratedFragment : Fragment() {
     private val binding get() = _binding!!
 
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentIllustratedBinding.inflate(inflater, container, false)
-
-        val intent = Intent(activity, MainActivity::class.java)
-        val titleanimal = "animal"
+        val activity = activity as? MainActivity
+        activity?.setTopText(R.string.illustratedText)
 
         binding.animalBtn.setOnClickListener {
-
             Navigation.findNavController(it).navigate(
                 IllustratedFragmentDirections.actionIllustratedFragmentToAnimalFragment()
             )
-            intent.putExtra("animal_key",titleanimal)
-        }
 
+        }
         return binding.root
     }
 }
