@@ -19,11 +19,13 @@
 
     <Button
         android:id="@+id/btnTap"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="#00FFFFFF"
         android:contentDescription="@string/tap_btn"
         android:text="@string/tap_text"
+        android:textColor="#0085FF"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
