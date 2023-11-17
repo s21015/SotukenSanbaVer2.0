@@ -25,6 +25,22 @@ class namingFragment : Fragment() {
                 namingFragmentDirections.namingToDetail()
             )
         }
+
+        binding.miniAnimalBtn.setOnClickListener {
+            binding.textView.setText("どうぶつ")
+        }
+
+        binding.miniPlantBtn.setOnClickListener {
+            binding.textView.setText("しょくぶつ")
+        }
+
+        binding.miniInsectBtn.setOnClickListener {
+            binding.textView.setText("むし")
+        }
+
+        binding.miniOtherBtn.setOnClickListener {
+            binding.textView.setText("そのた")
+        }
         return binding.root
     }
 }
