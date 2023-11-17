@@ -38,4 +38,5 @@
     <string name="nextBtn">次へボタン</string>
     <string name="detailTxt">とくちょうをかいてね</string>
     <string name="tap_text">タップしてスタート！</string>
+    <string name="tapBtn">タップしてスタートボタン</string>
 </resources>
