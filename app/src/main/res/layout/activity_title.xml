@@ -17,20 +17,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/titlescreen" />
 
-    <Button
-        android:id="@+id/btnTap"
-        android:layout_width="0dp"
+    <ImageButton
+        android:id="@+id/tapBtn"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        android:contentDescription="@string/tap_btn"
-        android:text="@string/tap_text"
-        android:textColor="#0085FF"
-        android:textSize="30sp"
+        android:layout_marginBottom="130dp"
+        android:background="@null"
+        android:contentDescription="@string/tapBtn"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.760"
-        tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
+        app:srcCompat="@drawable/tap" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
