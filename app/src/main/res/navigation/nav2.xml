@@ -17,5 +17,9 @@
         android:id="@+id/detailFragment"
         android:name="com.example.sotukensanbaver20.detailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/detailToNaming"
+            app:destination="@id/namingFragment" />
+    </fragment>
 </navigation>
