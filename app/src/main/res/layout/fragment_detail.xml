@@ -9,7 +9,7 @@
 
     <ImageButton
         android:id="@+id/nextBtn"
-        android:layout_width="132dp"
+        android:layout_width="106dp"
         android:layout_height="69dp"
         android:layout_marginTop="16dp"
         android:background="@null"
@@ -17,8 +17,8 @@
         android:scaleType="centerCrop"
         android:src="@drawable/registration"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/returnBtn"
         app:layout_constraintTop_toBottomOf="@+id/detailText"
         tools:ignore="ImageContrastCheck" />
 
@@ -38,5 +38,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/returnBtn"
+        android:layout_width="106dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:contentDescription="@string/returnBtn"
+        android:scaleType="centerCrop"
+        android:src="@drawable/return_btn"
+        app:layout_constraintEnd_toStartOf="@+id/nextBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailText"
+        tools:ignore="ImageContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
