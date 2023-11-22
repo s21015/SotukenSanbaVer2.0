@@ -19,7 +19,7 @@
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" >
         <action
-            android:id="@+id/detailToNaming"
+            android:id="@+id/action_detailFragment_to_namingFragment"
             app:destination="@id/namingFragment" />
     </fragment>
 </navigation>
