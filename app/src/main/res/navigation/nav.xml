@@ -6,6 +6,18 @@
     app:startDestination="@id/illustratedFragment">
 
     <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.sotukensanbaver20.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/mainToillustarated"
+            app:destination="@id/illustratedFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_animalFragment"
+            app:destination="@id/animalFragment" />
+    </fragment>
+    <fragment
         android:id="@+id/illustratedFragment"
         android:name="com.example.sotukensanbaver20.IllustratedFragment"
         android:label="fragment_illustrated"
