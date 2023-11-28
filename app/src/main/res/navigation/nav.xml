@@ -3,8 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav"
-    app:startDestination="@id/illustratedFragment">
+    app:startDestination="@id/mainFragment">
 
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.sotukensanbaver20.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/mainToillustarated"
+            app:destination="@id/illustratedFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_animalFragment"
+            app:destination="@id/animalFragment" />
+    </fragment>
     <fragment
         android:id="@+id/illustratedFragment"
         android:name="com.example.sotukensanbaver20.IllustratedFragment"
