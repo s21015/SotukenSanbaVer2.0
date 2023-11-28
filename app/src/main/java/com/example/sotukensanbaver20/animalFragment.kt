@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import com.example.sotukensanbaver20.databinding.FragmentAnimalBinding
 
 class animalFragment : Fragment() {
-    // TODO: Rename and change types of parameters
     private var _binding: FragmentAnimalBinding? = null
 
     private val binding get() = _binding!!
