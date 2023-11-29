@@ -13,9 +13,6 @@
         <action
             android:id="@+id/mainToillustarated"
             app:destination="@id/illustratedFragment" />
-        <action
-            android:id="@+id/action_mainFragment_to_animalFragment"
-            app:destination="@id/animalFragment" />
     </fragment>
     <fragment
         android:id="@+id/illustratedFragment"
@@ -23,13 +20,13 @@
         android:label="fragment_illustrated"
         tools:layout="@layout/fragment_illustrated" >
         <action
-            android:id="@+id/action_illustratedFragment_to_animalFragment"
-            app:destination="@id/animalFragment" />
+            android:id="@+id/action_illustratedFragment_to_itemsFragment"
+            app:destination="@id/itemsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/animalFragment"
-        android:name="com.example.sotukensanbaver20.animalFragment"
-        android:label="fragment_animal"
-        tools:layout="@layout/fragment_animal" />
+        android:id="@+id/itemsFragment"
+        android:name="com.example.sotukensanbaver20.ItemsFragment"
+        android:label="fragment_items"
+        tools:layout="@layout/fragment_items" />
 
 </navigation>

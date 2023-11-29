@@ -25,7 +25,7 @@ class IllustratedFragment : Fragment() {
 
         binding.animalBtn.setOnClickListener {
             Navigation.findNavController(it).navigate(
-                IllustratedFragmentDirections.actionIllustratedFragmentToAnimalFragment()
+                IllustratedFragmentDirections.actionIllustratedFragmentToItemsFragment()
             )
 
         }
