@@ -12,6 +12,15 @@
         <action
             android:id="@+id/namingToDetail"
             app:destination="@id/detailFragment" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="type"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
@@ -21,5 +30,12 @@
         <action
             android:id="@+id/action_detailFragment_to_namingFragment"
             app:destination="@id/namingFragment" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="type"
+            app:argType="integer" />
     </fragment>
 </navigation>
