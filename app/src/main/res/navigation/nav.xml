@@ -32,6 +32,6 @@
         android:id="@+id/recyclerFragment"
         android:name="com.example.sotukensanbaver20.RecyclerFragment"
         android:label="fragment_recycler"
-        tools:layout="@layout/fragment_recycler" />
+        tools:layout="@layout/fragment_recycler"/>
 
 </navigation>

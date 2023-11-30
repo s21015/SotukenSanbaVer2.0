@@ -7,11 +7,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.viewModels
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModel
 import com.example.sotukensanbaver20.databinding.ActivityCameraBinding
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 import androidx.navigation.findNavController
+import java.lang.reflect.Type
 
 class CameraActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCameraBinding
@@ -23,6 +27,7 @@ class CameraActivity : AppCompatActivity() {
             binding.imageView2.setImageURI(fileUri)
         }
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +45,5 @@ class CameraActivity : AppCompatActivity() {
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE).apply {
             putExtra(MediaStore.EXTRA_OUTPUT, fileUri)
         }
-        cameraResultLauncher.launch(intent)
     }
 }
