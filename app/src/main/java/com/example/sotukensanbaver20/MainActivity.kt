@@ -17,7 +17,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        /*val navController = findNavController(R.id.fragmentContainerView)
+        navController.navigate(R.id.illustratedFragment)*/
 
         binding.cameraBtn.setOnClickListener {
             val intent = Intent(application,CameraActivity::class.java)
