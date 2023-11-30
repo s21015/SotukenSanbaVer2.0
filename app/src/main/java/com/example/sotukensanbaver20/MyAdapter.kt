@@ -27,7 +27,7 @@ class MyAdapter : ListAdapter<MyEntity, MyAdapter.YourViewHolder>(YourDiffCallba
         val named: TextView = itemView.findViewById(R.id.text_view)
 
         fun bind(entity: MyEntity) {
-            named.text = entity.name
+            named.text = entity.name + entity.type
         }
     }
 
