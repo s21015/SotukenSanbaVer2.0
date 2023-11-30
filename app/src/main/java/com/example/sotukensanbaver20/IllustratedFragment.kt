@@ -26,10 +26,25 @@ class IllustratedFragment : Fragment() {
 
         binding.animalBtn.setOnClickListener {
             Navigation.findNavController(it).navigate(
-                IllustratedFragmentDirections.actionIllustratedFragmentToRecyclerFragment()
+                IllustratedFragmentDirections.actionIllustratedFragmentToRecyclerFragment(1)
             )
-
         }
+        binding.plantBtn.setOnClickListener {
+            Navigation.findNavController(it).navigate(
+                IllustratedFragmentDirections.actionIllustratedFragmentToRecyclerFragment(2)
+            )
+        }
+        binding.insectBtn.setOnClickListener {
+            Navigation.findNavController(it).navigate(
+                IllustratedFragmentDirections.actionIllustratedFragmentToRecyclerFragment(3)
+            )
+        }
+        binding.otherBtn.setOnClickListener {
+            Navigation.findNavController(it).navigate(
+                IllustratedFragmentDirections.actionIllustratedFragmentToRecyclerFragment(4)
+            )
+        }
+
         return binding.root
     }
 }

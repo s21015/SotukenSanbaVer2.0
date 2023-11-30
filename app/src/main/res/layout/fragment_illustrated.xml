@@ -14,7 +14,7 @@
         android:contentDescription="@string/animalButton"
         android:scaleType="centerCrop"
         android:src="@drawable/animal"
-        app:layout_constraintBottom_toTopOf="@+id/weatherBtn"
+        app:layout_constraintBottom_toTopOf="@+id/insectBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/plantBtn"
         app:layout_constraintHorizontal_bias="0.5"
@@ -30,7 +30,7 @@
         android:contentDescription="@string/plantButton"
         android:scaleType="centerCrop"
         android:src="@drawable/plant"
-        app:layout_constraintBottom_toTopOf="@+id/buildingBtn"
+        app:layout_constraintBottom_toTopOf="@+id/otherBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/animalBtn"
@@ -38,7 +38,7 @@
         tools:ignore="ImageContrastCheck" />
 
     <ImageButton
-        android:id="@+id/weatherBtn"
+        android:id="@+id/insectBtn"
         android:layout_width="155dp"
         android:layout_height="180dp"
         android:background="#00FFFFFF"
@@ -47,14 +47,14 @@
         android:src="@drawable/insect"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buildingBtn"
+        app:layout_constraintEnd_toStartOf="@+id/otherBtn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/animalBtn"
         tools:ignore="ImageContrastCheck" />
 
     <ImageButton
-        android:id="@+id/buildingBtn"
+        android:id="@+id/otherBtn"
         android:layout_width="155dp"
         android:layout_height="180dp"
         android:background="#00FFFFFF"
@@ -64,7 +64,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/weatherBtn"
+        app:layout_constraintStart_toEndOf="@+id/insectBtn"
         app:layout_constraintTop_toBottomOf="@+id/plantBtn"
         tools:ignore="ImageContrastCheck" />
 

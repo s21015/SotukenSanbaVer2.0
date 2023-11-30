@@ -7,12 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sotukensanbaver20.databinding.FragmentRecyclerBinding
 
 class RecyclerFragment : Fragment() {
+    private val args:RecyclerFragmentArgs by navArgs()
 
     private val viewModel: MyViewModel by viewModels {
         MyViewModelFactory((requireActivity().application as MyApplication).repository)
@@ -34,7 +36,7 @@ class RecyclerFragment : Fragment() {
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
         binding.recyclerView.adapter = adapter
 
-        viewModel.allEntities.observe(viewLifecycleOwner, Observer { entities ->
+        viewModel.getType(type = args.type).observe(viewLifecycleOwner, Observer { entities ->
             entities?.let { adapter.submitList(it) }
         })
 

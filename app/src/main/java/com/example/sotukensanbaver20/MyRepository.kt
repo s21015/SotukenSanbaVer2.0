@@ -11,6 +11,13 @@ class MyRepository(private val myDao: MyDao) {
     suspend fun deleteAll() {
         return myDao.deleteAll()
     }
+    fun getType(type:Int): LiveData<List<MyEntity>> {
+        return myDao.getType(type)
+    }
+
+    fun getEnd(): LiveData<List<MyEntity>> {
+        return myDao.getEnd()
+    }
 
     @Suppress("RedundantSuspendModifier")
     @WorkerThread

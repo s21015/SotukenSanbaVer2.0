@@ -18,4 +18,11 @@ interface MyDao {
 
     @Query("DELETE FROM my_table_name")
     suspend fun deleteAll()
+
+    @Query("SELECT * FROM my_table_name WHERE type = :type")
+    fun getType(type:Int): LiveData<List<MyEntity>>
+
+    //データベースの最後の行を取ってくるやつ
+    @Query("SELECT * FROM my_table_name ORDER BY id DESC LIMIT 1")
+    fun getEnd(): LiveData<List<MyEntity>>
 }

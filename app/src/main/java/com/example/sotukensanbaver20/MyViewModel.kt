@@ -8,6 +8,14 @@ import kotlinx.coroutines.launch
 
 class MyViewModel(private val repository: MyRepository) : ViewModel() {
     val allEntities: LiveData<List<MyEntity>> = repository.getAllEntities()
+
+    fun getType(type: Int): LiveData<List<MyEntity>> {
+        return repository.getType(type)
+    }
+
+    fun getEnd(): LiveData<List<MyEntity>> {
+        return repository.getEnd()
+    }
     fun insert(entity: MyEntity) {
         viewModelScope.launch {
             repository.insert(entity)
