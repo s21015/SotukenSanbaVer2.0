@@ -45,5 +45,6 @@ class CameraActivity : AppCompatActivity() {
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE).apply {
             putExtra(MediaStore.EXTRA_OUTPUT, fileUri)
         }
+        cameraResultLauncher.launch(intent)
     }
 }
