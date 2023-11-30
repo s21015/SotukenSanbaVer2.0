@@ -8,7 +8,7 @@
     tools:context=".namingFragment">
 
     <ImageButton
-        android:id="@+id/nextBtn"
+        android:id="@+id/registerBtn"
         android:layout_width="106dp"
         android:layout_height="69dp"
         android:layout_marginTop="16dp"
@@ -48,7 +48,7 @@
         android:contentDescription="@string/returnBtn"
         android:scaleType="centerCrop"
         android:src="@drawable/return_btn"
-        app:layout_constraintEnd_toStartOf="@+id/nextBtn"
+        app:layout_constraintEnd_toStartOf="@+id/registerBtn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailText"
