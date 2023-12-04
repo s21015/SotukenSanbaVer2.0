@@ -1,5 +1,6 @@
 package com.example.sotukensanbaver20
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -37,7 +38,7 @@ class detailFragment : Fragment() {
         }
         binding.registerBtn.setOnClickListener {
             viewModel.insert(MyEntity(name = args.name!!, type = args.type))
-            activity?.finish()
+            (requireActivity() as CameraActivity).startMainActivity(args.type)
         }
         return binding.root
     }
