@@ -13,9 +13,6 @@ class MyViewModel(private val repository: MyRepository) : ViewModel() {
         return repository.getType(type)
     }
 
-    fun getEnd(): LiveData<List<MyEntity>> {
-        return repository.getEnd()
-    }
     fun insert(entity: MyEntity) {
         viewModelScope.launch {
             repository.insert(entity)

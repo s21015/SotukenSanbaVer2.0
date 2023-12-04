@@ -22,6 +22,10 @@
         <action
             android:id="@+id/action_illustratedFragment_to_recyclerFragment"
             app:destination="@id/recyclerFragment" />
+        <argument
+            android:name="type"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
     <fragment
         android:id="@+id/itemsFragment"

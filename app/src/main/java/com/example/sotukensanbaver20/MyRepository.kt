@@ -15,10 +15,6 @@ class MyRepository(private val myDao: MyDao) {
         return myDao.getType(type)
     }
 
-    fun getEnd(): LiveData<List<MyEntity>> {
-        return myDao.getEnd()
-    }
-
     @Suppress("RedundantSuspendModifier")
     @WorkerThread
     suspend fun insert(entity: MyEntity) {

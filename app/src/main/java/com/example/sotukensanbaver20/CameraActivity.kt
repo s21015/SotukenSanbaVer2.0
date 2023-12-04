@@ -18,6 +18,10 @@ import androidx.navigation.findNavController
 import java.lang.reflect.Type
 
 class CameraActivity : AppCompatActivity() {
+    private val viewModel: MyViewModel by viewModels {
+        MyViewModelFactory((application as MyApplication).repository)
+    }
+
     private lateinit var binding: ActivityCameraBinding
 
     private var fileUri: Uri? = null
@@ -26,6 +30,12 @@ class CameraActivity : AppCompatActivity() {
         if(result.resultCode == RESULT_OK) {
             binding.imageView2.setImageURI(fileUri)
         }
+    }
+
+    fun startMainActivity(type: Int) {
+        val intent = Intent(application, MainActivity::class.java)
+        intent.putExtra("type", type)
+        startActivity(intent)
     }
 
 
@@ -45,6 +55,7 @@ class CameraActivity : AppCompatActivity() {
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE).apply {
             putExtra(MediaStore.EXTRA_OUTPUT, fileUri)
         }
-        //cameraResultLauncher.launch(intent)
+
+//        cameraResultLauncher.launch(intent)
     }
 }
