@@ -1,4 +1,4 @@
-package com.example.sotukensanbaver20
+package com.example.sotukensanbaver20.database
 
 import android.app.Application
 import androidx.annotation.WorkerThread

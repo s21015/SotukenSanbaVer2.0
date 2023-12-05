@@ -1,4 +1,4 @@
-package com.example.sotukensanbaver20
+package com.example.sotukensanbaver20.database
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
