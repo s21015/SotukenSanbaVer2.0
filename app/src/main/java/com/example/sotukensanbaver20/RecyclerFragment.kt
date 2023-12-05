@@ -7,12 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.map
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.sotukensanbaver20.database.MyApplication
+import com.example.sotukensanbaver20.database.MyViewModel
+import com.example.sotukensanbaver20.database.MyViewModelFactory
 import com.example.sotukensanbaver20.databinding.FragmentRecyclerBinding
 
 class RecyclerFragment : Fragment() {
