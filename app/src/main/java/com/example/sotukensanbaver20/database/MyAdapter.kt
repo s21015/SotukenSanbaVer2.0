@@ -1,4 +1,4 @@
-package com.example.sotukensanbaver20
+package com.example.sotukensanbaver20.database
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +8,7 @@ import androidx.annotation.WorkerThread
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.sotukensanbaver20.R
 
 class MyAdapter : ListAdapter<MyEntity, MyAdapter.YourViewHolder>(YourDiffCallback()) {
 

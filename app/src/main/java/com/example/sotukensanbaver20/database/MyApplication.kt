@@ -1,7 +1,9 @@
-package com.example.sotukensanbaver20
+package com.example.sotukensanbaver20.database
 
 import android.app.Application
 import androidx.annotation.WorkerThread
+import com.example.sotukensanbaver20.database.MyDatabase
+import com.example.sotukensanbaver20.database.MyRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 
