@@ -1,5 +1,6 @@
 package com.example.sotukensanbaver20
 
+import android.net.Uri
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -12,6 +13,10 @@ class MyViewModel(private val repository: MyRepository) : ViewModel() {
     fun getType(type: Int): LiveData<List<MyEntity>> {
         return repository.getType(type)
     }
+
+    /*fun getUri(uri: Uri): LiveData<List<MyEntity>> {
+        return repository.getUri(uri)
+    }*/
 
     fun insert(entity: MyEntity) {
         viewModelScope.launch {

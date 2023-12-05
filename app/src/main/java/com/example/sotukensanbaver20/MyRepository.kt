@@ -1,5 +1,6 @@
 package com.example.sotukensanbaver20
 
+import android.net.Uri
 import androidx.annotation.WorkerThread
 import androidx.lifecycle.LiveData
 
@@ -14,6 +15,9 @@ class MyRepository(private val myDao: MyDao) {
     fun getType(type:Int): LiveData<List<MyEntity>> {
         return myDao.getType(type)
     }
+    /*fun getUri(uri: Uri): LiveData<List<MyEntity>> {
+        return myDao.getUri(uri)
+    }*/
 
     @Suppress("RedundantSuspendModifier")
     @WorkerThread

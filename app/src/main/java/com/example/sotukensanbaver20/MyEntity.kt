@@ -1,5 +1,6 @@
 package com.example.sotukensanbaver20
 
+import android.net.Uri
 import androidx.annotation.WorkerThread
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -11,5 +12,6 @@ data class MyEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
     val name: String,
-    val type: Int
+    val type: Int,
+    val uri: String
 )

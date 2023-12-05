@@ -30,6 +30,7 @@ class namingFragment : Fragment() {
 
         var name = ""
         var type = 0
+        val uri = ""
 
         if (args.name != null) {
             binding.editText.setText(args.name)
@@ -45,7 +46,7 @@ class namingFragment : Fragment() {
             name = binding.editText.text.toString()
 
             Navigation.findNavController(it).navigate(
-                namingFragmentDirections.namingToDetail(name, type)
+                namingFragmentDirections.namingToDetail(name, type, uri)
             )
         }
 

@@ -18,13 +18,17 @@ import androidx.navigation.findNavController
 import java.lang.reflect.Type
 
 class CameraActivity : AppCompatActivity() {
-    private val viewModel: MyViewModel by viewModels {
-        MyViewModelFactory((application as MyApplication).repository)
-    }
 
     private lateinit var binding: ActivityCameraBinding
 
     private var fileUri: Uri? = null
+
+    val stringFileUri = fileUri.toString()
+    val bundle = Bundle().apply {
+        putString("uri", stringFileUri)
+    }
+    val fragment = namingFragment()
+
 
     private val cameraResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if(result.resultCode == RESULT_OK) {
@@ -56,6 +60,12 @@ class CameraActivity : AppCompatActivity() {
             putExtra(MediaStore.EXTRA_OUTPUT, fileUri)
         }
 
-//        cameraResultLauncher.launch(intent)
+        fragment.arguments = bundle
+
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainerView3, fragment)
+            .commit()
+
+        cameraResultLauncher.launch(intent)
     }
 }

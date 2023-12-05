@@ -1,7 +1,9 @@
 package com.example.sotukensanbaver20
 
+import android.net.Uri
 import androidx.annotation.WorkerThread
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.viewmodel.viewModelFactory
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
@@ -21,5 +23,8 @@ interface MyDao {
 
     @Query("SELECT * FROM my_table_name WHERE type = :type")
     fun getType(type:Int): LiveData<List<MyEntity>>
+
+    /*@Query("UPDATE my_table_name SET uri =  WHERE id = ")
+    fun getUri(uri: Uri): LiveData<List<MyEntity>>*/
 
 }
