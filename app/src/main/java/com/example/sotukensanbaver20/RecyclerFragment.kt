@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.map
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -32,6 +33,52 @@ class RecyclerFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentRecyclerBinding.inflate(inflater, container, false)
+
+
+        val activity = activity as? MainActivity
+
+        viewModel.getType(args.type).observe(viewLifecycleOwner, Observer { myEntityList ->
+            // LiveDataから値を取り出して条件分岐
+            when {
+                myEntityList == null -> {
+                    view?.let {
+                        Navigation.findNavController(it).navigate(
+                            RecyclerFragmentDirections.recyclerTolistNull()
+                        )
+                    }
+                    activity?.setTopText(R.string.nullText)
+                }
+                myEntityList.isEmpty() -> {
+                    view?.let {
+                        Navigation.findNavController(it).navigate(
+                            RecyclerFragmentDirections.recyclerTolistNull()
+                        )
+                    }
+                    activity?.setTopText(R.string.nullText)
+                }
+                else -> {
+                    // リストが空でない場合の処理
+                    val firstEntity = myEntityList.first()
+                    when (firstEntity.type) {
+                        1 -> {
+                            activity?.setTopText(R.string.animalText)
+                        }
+                        2 -> {
+                            activity?.setTopText(R.string.plantText)
+                        }
+                        3 -> {
+                            activity?.setTopText(R.string.insectText)
+                        }
+                        4 -> {
+                            activity?.setTopText(R.string.othersText)
+                        }
+
+                    }
+                }
+            }
+        })
+
+
 
         adapter = MyAdapter()
         binding.recyclerView.layoutManager = LinearLayoutManager(context)

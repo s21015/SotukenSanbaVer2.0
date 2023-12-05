@@ -9,6 +9,7 @@
     <string name="plantText">しょくぶつ</string>
     <string name="insectText">むし</string>
     <string name="othersText">そのた</string>
+    <string name="nullText">なにもないよ！</string>
     <string name="footerBackground">フッターの背景画像</string>
     <string name="illustratedBackgound">図鑑ボタンの背景画像</string>
     <string name="optionBackgorund">設定ボタンの背景画像</string>
@@ -43,4 +44,6 @@
     <string name="tap_text">タップしてスタート！</string>
     <string name="tapBtn">タップしてスタートボタン</string>
     <string name="returnBtn">戻るボタン</string>
+    <string name="errerTxt">なかになにもないよ！</string>
+    <string name="addPlzTxt">ついかしてね！</string>
 </resources>
