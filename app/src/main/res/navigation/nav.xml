@@ -40,6 +40,14 @@
         <argument
             android:name="type"
             app:argType="integer" />
+        <action
+            android:id="@+id/recyclerTolistNull"
+            app:destination="@id/listNullerrer" />
     </fragment>
+    <fragment
+        android:id="@+id/listNullerrer"
+        android:name="com.example.sotukensanbaver20.listNullerrer"
+        android:label="fragment_list_nullerrer"
+        tools:layout="@layout/fragment_list_nullerrer" />
 
 </navigation>
