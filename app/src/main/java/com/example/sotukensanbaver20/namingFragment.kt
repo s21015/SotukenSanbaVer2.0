@@ -9,6 +9,7 @@ import androidx.activity.viewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.sotukensanbaver20.databinding.FragmentNamingBinding
 
@@ -45,7 +46,8 @@ class namingFragment : Fragment() {
         binding.registerBtn.setOnClickListener {
             name = binding.editText.text.toString()
 
-            Navigation.findNavController(it).navigate(
+//            Navigation.findNavController(it).navigate(
+            findNavController().navigate(
                 namingFragmentDirections.namingToDetail(name, type, uri)
             )
         }
