@@ -34,7 +34,7 @@ class detailFragment : Fragment() {
             )
         }
         binding.registerBtn.setOnClickListener {
-            viewModel.insert(MyEntity(name = args.name!!, type = args.type, uri = args.uri!!))
+            viewModel.insert(MyEntity(name = args.name!!, type = args.type, uri = args.uri!!, detail = binding.detailText.text.toString()))
             (requireActivity() as CameraActivity).startMainActivity(args.type)
         }
         return binding.root

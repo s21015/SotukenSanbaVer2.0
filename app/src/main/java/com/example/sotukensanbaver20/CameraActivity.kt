@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.provider.MediaStore
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModel
 import com.example.sotukensanbaver20.databinding.ActivityCameraBinding
@@ -23,16 +24,19 @@ class CameraActivity : AppCompatActivity() {
 
     private var fileUri: Uri? = null
 
-    val stringFileUri = fileUri.toString()
-    val bundle = Bundle().apply {
-        putString("uri", stringFileUri)
-    }
-    val fragment = namingFragment()
+    //val stringFileUri = fileUri.toString()
+//    val bundle = Bundle().apply {
+//        putString("uri", stringFileUri)
+//    }
+
 
 
     private val cameraResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if(result.resultCode == RESULT_OK) {
             binding.imageView2.setImageURI(fileUri)
+            binding.fragmentContainerView3.findNavController().navigate(
+                R.id.namingFragment, bundleOf("uri" to fileUri.toString())
+            )
         }
     }
 
@@ -41,6 +45,10 @@ class CameraActivity : AppCompatActivity() {
         intent.putExtra("type", type)
         startActivity(intent)
     }
+
+//        val intent = Intent(application, namingFragment::class.java)
+//        intent.putExtra("uri",stringFileUri)
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,12 +67,6 @@ class CameraActivity : AppCompatActivity() {
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE).apply {
             putExtra(MediaStore.EXTRA_OUTPUT, fileUri)
         }
-
-        fragment.arguments = bundle
-
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragmentContainerView3, fragment)
-            .commit()
 
         cameraResultLauncher.launch(intent)
     }

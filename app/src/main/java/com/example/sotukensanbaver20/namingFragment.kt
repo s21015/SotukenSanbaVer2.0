@@ -12,6 +12,8 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.sotukensanbaver20.databinding.FragmentNamingBinding
+import android.content.Intent
+import android.util.Log
 
 class namingFragment : Fragment() {
     private val args:namingFragmentArgs by navArgs()
@@ -28,10 +30,9 @@ class namingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentNamingBinding.inflate(inflater, container, false)
-
+        val uri = ""
         var name = ""
         var type = 0
-        val uri = ""
 
         if (args.name != null) {
             binding.editText.setText(args.name)
@@ -74,4 +75,8 @@ class namingFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        Log.d("NamingFragment", "uri? ${args.uri}")
+    }
 }

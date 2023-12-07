@@ -8,6 +8,7 @@ import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
+import androidx.room.Update
 
 @WorkerThread
 @Dao
@@ -24,7 +25,7 @@ interface MyDao {
     @Query("SELECT * FROM my_table_name WHERE type = :type")
     fun getType(type:Int): LiveData<List<MyEntity>>
 
-    /*@Query("UPDATE my_table_name SET uri =  WHERE id = ")
-    fun getUri(uri: Uri): LiveData<List<MyEntity>>*/
+    @Update
+    suspend fun Update(myEntity: MyEntity)
 
 }

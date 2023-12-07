@@ -14,9 +14,6 @@ class MyViewModel(private val repository: MyRepository) : ViewModel() {
         return repository.getType(type)
     }
 
-    /*fun getUri(uri: Uri): LiveData<List<MyEntity>> {
-        return repository.getUri(uri)
-    }*/
 
     fun insert(entity: MyEntity) {
         viewModelScope.launch {
@@ -27,6 +24,12 @@ class MyViewModel(private val repository: MyRepository) : ViewModel() {
     fun deleteAll() {
         viewModelScope.launch {
             repository.deleteAll()
+        }
+    }
+
+    fun update(entity: MyEntity) {
+        viewModelScope.launch {
+            repository.update(entity)
         }
     }
 }

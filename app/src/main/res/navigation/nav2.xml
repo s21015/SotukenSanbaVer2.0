@@ -25,7 +25,7 @@
             android:name="uri"
             app:argType="string"
             app:nullable="true"
-            android:defaultValue="@Null" />
+            android:defaultValue="invalid" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"

@@ -13,5 +13,6 @@ data class MyEntity(
     val id: Long = 0,
     val name: String,
     val type: Int,
-    val uri: String
+    val uri: String,
+    val detail: String
 )
