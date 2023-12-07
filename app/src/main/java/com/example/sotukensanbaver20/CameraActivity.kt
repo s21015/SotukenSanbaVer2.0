@@ -12,6 +12,7 @@ import androidx.activity.viewModels
 import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModel
+import androidx.navigation.findNavController
 
 import com.example.sotukensanbaver20.databinding.ActivityCameraBinding
 import java.text.SimpleDateFormat
