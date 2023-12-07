@@ -19,6 +19,10 @@ class MyRepository(private val myDao: MyDao) {
         myDao.Update(entity)
     }
 
+    suspend fun delete(id:Long) {
+        return myDao.delete(id)
+    }
+
 
 
     @Suppress("RedundantSuspendModifier")

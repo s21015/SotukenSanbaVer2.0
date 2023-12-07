@@ -30,7 +30,7 @@ class namingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentNamingBinding.inflate(inflater, container, false)
-        val uri = ""
+        val uri = args.uri
         var name = ""
         var type = 0
 

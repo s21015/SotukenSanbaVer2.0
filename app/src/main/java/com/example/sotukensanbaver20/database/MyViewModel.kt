@@ -33,6 +33,12 @@ class MyViewModel(private val repository: MyRepository) : ViewModel() {
         }
     }
 
+    fun delete(id: Long) {
+        viewModelScope.launch {
+            repository.delete(id)
+        }
+    }
+
 }
 class MyViewModelFactory(private val repository: MyRepository) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

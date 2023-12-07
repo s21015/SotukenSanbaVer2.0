@@ -1,5 +1,6 @@
 package com.example.sotukensanbaver20
 
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,7 +31,8 @@ class MyAdapter : ListAdapter<MyEntity, MyAdapter.YourViewHolder>(YourDiffCallba
         val imaged: ImageView = itemView.findViewById(R.id.imgView)
 
         fun bind(entity: MyEntity) {
-            named.text = entity.name + ' ' + entity.type
+            named.text = entity.name
+            imaged.setImageURI(Uri.parse(entity.uri))
         }
     }
 
