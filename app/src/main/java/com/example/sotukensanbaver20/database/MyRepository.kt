@@ -14,9 +14,11 @@ class MyRepository(private val myDao: MyDao) {
     fun getType(type:Int): LiveData<List<MyEntity>> {
         return myDao.getType(type)
     }
+
     suspend fun update(entity: MyEntity) {
         myDao.Update(entity)
     }
+
 
 
     @Suppress("RedundantSuspendModifier")

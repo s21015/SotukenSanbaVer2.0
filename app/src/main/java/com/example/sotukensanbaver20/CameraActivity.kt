@@ -8,15 +8,18 @@ import android.os.Bundle
 import android.provider.MediaStore
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+
 import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModel
+
 import com.example.sotukensanbaver20.databinding.ActivityCameraBinding
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
-import androidx.navigation.findNavController
-import java.lang.reflect.Type
+import com.example.sotukensanbaver20.database.MyApplication
+import com.example.sotukensanbaver20.database.MyViewModel
+import com.example.sotukensanbaver20.database.MyViewModelFactory
 
 class CameraActivity : AppCompatActivity() {
 
