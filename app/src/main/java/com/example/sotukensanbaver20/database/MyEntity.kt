@@ -17,5 +17,4 @@ data class MyEntity(
     val type: Int,
     val uri: String,
     val detail: String
-
 )
