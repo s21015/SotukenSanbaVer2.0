@@ -1,11 +1,8 @@
-package com.example.sotukensanbaver20
+package com.example.sotukensanbaver20.database
 
-import android.net.Uri
 import androidx.annotation.WorkerThread
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.viewmodel.viewModelFactory
 import androidx.room.Dao
-import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update

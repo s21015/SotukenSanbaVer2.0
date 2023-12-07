@@ -1,6 +1,5 @@
-package com.example.sotukensanbaver20
+package com.example.sotukensanbaver20.database
 
-import android.net.Uri
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
