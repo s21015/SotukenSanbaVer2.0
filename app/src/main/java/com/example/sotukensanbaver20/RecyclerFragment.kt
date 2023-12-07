@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+
 import androidx.navigation.Navigation
+
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,7 +20,7 @@ import com.example.sotukensanbaver20.database.MyViewModelFactory
 import com.example.sotukensanbaver20.databinding.FragmentRecyclerBinding
 
 class RecyclerFragment : Fragment() {
-    private val args:RecyclerFragmentArgs by navArgs()
+    private val args: RecyclerFragmentArgs by navArgs()
 
     private val viewModel: MyViewModel by viewModels {
         MyViewModelFactory((requireActivity().application as MyApplication).repository)
@@ -39,48 +41,23 @@ class RecyclerFragment : Fragment() {
 
         val activity = activity as? MainActivity
 
-        viewModel.getType(args.type).observe(viewLifecycleOwner, Observer { myEntityList ->
-            // LiveDataから値を取り出して条件分岐
-            when {
-                myEntityList == null -> {
-                    view?.let {
-                        Navigation.findNavController(it).navigate(
-                            RecyclerFragmentDirections.recyclerTolistNull()
-                        )
-                    }
-                    activity?.setTopText(R.string.nullText)
-                }
-                myEntityList.isEmpty() -> {
-                    view?.let {
-                        Navigation.findNavController(it).navigate(
-                            RecyclerFragmentDirections.recyclerTolistNull()
-                        )
-                    }
-                    activity?.setTopText(R.string.nullText)
-                }
-                else -> {
-                    // リストが空でない場合の処理
-                    val firstEntity = myEntityList.first()
-                    when (firstEntity.type) {
-                        1 -> {
-                            activity?.setTopText(R.string.animalText)
-                        }
-                        2 -> {
-                            activity?.setTopText(R.string.plantText)
-                        }
-                        3 -> {
-                            activity?.setTopText(R.string.insectText)
-                        }
-                        4 -> {
-                            activity?.setTopText(R.string.othersText)
-                        }
-
-                    }
-                }
+        when (args.type) {
+            1 -> {
+                activity?.setTopText(R.string.animalText)
             }
-        })
 
+            2 -> {
+                activity?.setTopText(R.string.plantText)
+            }
 
+            3 -> {
+                activity?.setTopText(R.string.insectText)
+            }
+
+            4 -> {
+                activity?.setTopText(R.string.othersText)
+            }
+        }
 
         adapter = MyAdapter()
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
@@ -90,7 +67,8 @@ class RecyclerFragment : Fragment() {
             entities?.let { adapter.submitList(it) }
         })
 
-        binding.recyclerView.layoutManager = GridLayoutManager(context, 2, RecyclerView.VERTICAL, false)
+        binding.recyclerView.layoutManager =
+            GridLayoutManager(context, 2, RecyclerView.VERTICAL, false)
 
         binding.deleteButton.setOnClickListener {
             viewModel.deleteAll()

@@ -6,6 +6,9 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 
+import androidx.room.Update
+
+
 @WorkerThread
 @Dao
 interface MyDao {
@@ -20,5 +23,10 @@ interface MyDao {
 
     @Query("SELECT * FROM my_table_name WHERE type = :type")
     fun getType(type:Int): LiveData<List<MyEntity>>
+
+
+    @Update
+    suspend fun Update(myEntity: MyEntity)
+
 
 }

@@ -15,6 +15,12 @@ class MyRepository(private val myDao: MyDao) {
         return myDao.getType(type)
     }
 
+    suspend fun update(entity: MyEntity) {
+        myDao.Update(entity)
+    }
+
+
+
     @Suppress("RedundantSuspendModifier")
     @WorkerThread
     suspend fun insert(entity: MyEntity) {

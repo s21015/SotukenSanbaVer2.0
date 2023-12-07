@@ -8,6 +8,11 @@ import android.os.Bundle
 import android.provider.MediaStore
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+
+import androidx.core.os.bundleOf
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModel
+
 import com.example.sotukensanbaver20.databinding.ActivityCameraBinding
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -17,17 +22,24 @@ import com.example.sotukensanbaver20.database.MyViewModel
 import com.example.sotukensanbaver20.database.MyViewModelFactory
 
 class CameraActivity : AppCompatActivity() {
-    private val viewModel: MyViewModel by viewModels {
-        MyViewModelFactory((application as MyApplication).repository)
-    }
 
     private lateinit var binding: ActivityCameraBinding
 
     private var fileUri: Uri? = null
 
+    //val stringFileUri = fileUri.toString()
+//    val bundle = Bundle().apply {
+//        putString("uri", stringFileUri)
+//    }
+
+
+
     private val cameraResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if(result.resultCode == RESULT_OK) {
             binding.imageView2.setImageURI(fileUri)
+            binding.fragmentContainerView3.findNavController().navigate(
+                R.id.namingFragment, bundleOf("uri" to fileUri.toString())
+            )
         }
     }
 
@@ -36,6 +48,10 @@ class CameraActivity : AppCompatActivity() {
         intent.putExtra("type", type)
         startActivity(intent)
     }
+
+//        val intent = Intent(application, namingFragment::class.java)
+//        intent.putExtra("uri",stringFileUri)
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,6 +71,6 @@ class CameraActivity : AppCompatActivity() {
             putExtra(MediaStore.EXTRA_OUTPUT, fileUri)
         }
 
-//        cameraResultLauncher.launch(intent)
+        cameraResultLauncher.launch(intent)
     }
 }
