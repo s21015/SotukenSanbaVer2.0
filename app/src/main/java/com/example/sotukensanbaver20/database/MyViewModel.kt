@@ -39,6 +39,10 @@ class MyViewModel(private val repository: MyRepository) : ViewModel() {
         }
     }
 
+    fun getItem(id: Long): LiveData<MyEntity> {
+        return repository.getItem(id)
+    }
+
 }
 class MyViewModelFactory(private val repository: MyRepository) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

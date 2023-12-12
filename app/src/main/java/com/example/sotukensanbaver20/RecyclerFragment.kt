@@ -7,9 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-
-import androidx.navigation.Navigation
-
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -37,7 +34,6 @@ class RecyclerFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentRecyclerBinding.inflate(inflater, container, false)
-
 
         val activity = activity as? MainActivity
 
@@ -69,10 +65,6 @@ class RecyclerFragment : Fragment() {
 
         binding.recyclerView.layoutManager =
             GridLayoutManager(context, 2, RecyclerView.VERTICAL, false)
-
-        binding.deleteButton.setOnClickListener {
-            viewModel.deleteAll()
-        }
 
         return binding.root
     }

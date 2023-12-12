@@ -46,4 +46,7 @@
     <string name="returnBtn">戻るボタン</string>
     <string name="errerTxt">なかになにもないよ！</string>
     <string name="addPlzTxt">ついかしてね！</string>
+    <string name="name">なまえぐわぁ</string>
+    <string name="detail">とくちょうぐわぁ</string>
+    <string name="deleteBtn">削除ボタン</string>
 </resources>

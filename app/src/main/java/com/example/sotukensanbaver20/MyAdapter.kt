@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.WorkerThread
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -33,6 +34,12 @@ class MyAdapter : ListAdapter<MyEntity, MyAdapter.YourViewHolder>(YourDiffCallba
         fun bind(entity: MyEntity) {
             named.text = entity.name
             imaged.setImageURI(Uri.parse(entity.uri))
+
+            itemView.setOnClickListener {
+                Navigation.findNavController(it).navigate(
+                    RecyclerFragmentDirections.actionRecyclerFragmentToStatusFragment(entity.id)
+                )
+            }
         }
     }
 

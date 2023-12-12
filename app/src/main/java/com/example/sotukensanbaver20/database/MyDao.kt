@@ -27,6 +27,9 @@ interface MyDao {
     @Query("DELETE FROM my_table_name WHERE id = :id")
     suspend fun delete(id:Long)
 
+    @Query("SELECT * FROM my_table_name WHERE id = :id")
+    fun getItem(id:Long): LiveData<MyEntity>
+
     @Update
     suspend fun Update(myEntity: MyEntity)
 
