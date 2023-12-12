@@ -23,7 +23,9 @@ class MyRepository(private val myDao: MyDao) {
         return myDao.delete(id)
     }
 
-
+    fun getItem(id:Long): LiveData<MyEntity> {
+        return myDao.getItem(id)
+    }
 
     @Suppress("RedundantSuspendModifier")
     @WorkerThread
