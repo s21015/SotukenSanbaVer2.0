@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.size
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
@@ -60,11 +61,19 @@ class RecyclerFragment : Fragment() {
         binding.recyclerView.adapter = adapter
 
         viewModel.getType(type = args.type).observe(viewLifecycleOwner, Observer { entities ->
-            entities?.let { adapter.submitList(it) }
+            entities?.let {
+                adapter.submitList(it)
+            }
         })
 
         binding.recyclerView.layoutManager =
             GridLayoutManager(context, 2, RecyclerView.VERTICAL, false)
+
+        viewModel.getType(type = args.type).observe(viewLifecycleOwner, Observer { entities ->
+            entities?.let {
+                binding.textView4.setText(it.size.toString() + "しゅるい")
+            }
+        })
 
         return binding.root
     }

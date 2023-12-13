@@ -61,6 +61,9 @@
             android:name="id"
             app:argType="long"
             android:defaultValue="0L" />
+        <action
+            android:id="@+id/action_statusFragment_to_recyclerFragment"
+            app:destination="@id/recyclerFragment" />
     </fragment>
 
 </navigation>
