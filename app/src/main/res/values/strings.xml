@@ -49,4 +49,6 @@
     <string name="name">なまえぐわぁ</string>
     <string name="detail">とくちょうぐわぁ</string>
     <string name="deleteBtn">削除ボタン</string>
+    <string name="countText">カウントテキスト</string>
+    <string name="coutText">種類数表示</string>
 </resources>
