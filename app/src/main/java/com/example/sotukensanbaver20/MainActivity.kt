@@ -1,12 +1,8 @@
 package com.example.sotukensanbaver20
 
-import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import com.example.sotukensanbaver20.databinding.ActivityMainBinding
 
@@ -30,7 +26,13 @@ class MainActivity : AppCompatActivity() {
 
         binding.cameraBtn.setOnClickListener {
             val intent = Intent(application, CameraActivity::class.java)
+            intent.putExtra("imgType",0)
             //launcher.launch(intent)
+            startActivity(intent)
+        }
+        binding.optionBtn.setOnClickListener {
+            val intent = Intent(application, CameraActivity::class.java)
+            intent.putExtra("imgType", 1)
             startActivity(intent)
         }
 
