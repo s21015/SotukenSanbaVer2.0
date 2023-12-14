@@ -39,21 +39,10 @@ class RecyclerFragment : Fragment() {
         val activity = activity as? MainActivity
 
         when (args.type) {
-            1 -> {
-                activity?.setTopText(R.string.animalText)
-            }
-
-            2 -> {
-                activity?.setTopText(R.string.plantText)
-            }
-
-            3 -> {
-                activity?.setTopText(R.string.insectText)
-            }
-
-            4 -> {
-                activity?.setTopText(R.string.othersText)
-            }
+            1 -> activity?.setTopText(R.string.animalText)
+            2 -> activity?.setTopText(R.string.plantText)
+            3 -> activity?.setTopText(R.string.insectText)
+            4 -> activity?.setTopText(R.string.othersText)
         }
 
         adapter = MyAdapter()

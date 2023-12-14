@@ -67,7 +67,6 @@ class StatusFragment : Fragment() {
         })
 
         binding.deleteBtn.setOnClickListener {
-//            viewModel.delete(args.id)
             showAlertDialog()
         }
 

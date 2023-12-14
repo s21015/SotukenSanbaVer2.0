@@ -41,17 +41,9 @@
             android:name="type"
             app:argType="integer" />
         <action
-            android:id="@+id/recyclerTolistNull"
-            app:destination="@id/listNullerrer" />
-        <action
             android:id="@+id/action_recyclerFragment_to_statusFragment"
             app:destination="@id/statusFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/listNullerrer"
-        android:name="com.example.sotukensanbaver20.listNullerrer"
-        android:label="fragment_list_nullerrer"
-        tools:layout="@layout/fragment_list_nullerrer" />
     <fragment
         android:id="@+id/statusFragment"
         android:name="com.example.sotukensanbaver20.StatusFragment"

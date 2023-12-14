@@ -5,14 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.viewModels
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.sotukensanbaver20.databinding.FragmentNamingBinding
-import android.content.Intent
 import android.util.Log
 
 class namingFragment : Fragment() {
@@ -20,9 +15,6 @@ class namingFragment : Fragment() {
 
     private var _binding: FragmentNamingBinding? = null
     private val binding get() = _binding!!
-
-
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -47,36 +39,24 @@ class namingFragment : Fragment() {
         binding.registerBtn.setOnClickListener {
             name = binding.editText.text.toString()
 
-//            Navigation.findNavController(it).navigate(
             findNavController().navigate(
                 namingFragmentDirections.namingToDetail(name, type, uri)
             )
         }
 
-        binding.miniAnimalBtn.setOnClickListener {
-            binding.textView.setText("どうぶつ")
-            type = 1
-        }
+        val miniBtns = listOf(
+            Triple(binding.miniAnimalBtn , "どうぶつ", 1),
+            Triple(binding.miniPlantBtn , "しょくぶつ", 2),
+            Triple(binding.miniInsectBtn , "むし", 3),
+            Triple(binding.miniOtherBtn , "そのた", 4),
+        )
 
-        binding.miniPlantBtn.setOnClickListener {
-            binding.textView.setText("しょくぶつ")
-            type = 2
-        }
-
-        binding.miniInsectBtn.setOnClickListener {
-            binding.textView.setText("むし")
-            type = 3
-        }
-
-        binding.miniOtherBtn.setOnClickListener {
-            binding.textView.setText("そのた")
-            type = 4
+        miniBtns.forEach { (btn, text, typeValue) ->
+            btn.setOnClickListener {
+                binding.textView.setText(text)
+                type = typeValue
+            }
         }
         return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        Log.d("NamingFragment", "uri? ${args.uri}")
     }
 }

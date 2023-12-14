@@ -28,13 +28,6 @@ class CameraActivity : AppCompatActivity() {
 
     private var fileUri: Uri? = null
 
-    //val stringFileUri = fileUri.toString()
-//    val bundle = Bundle().apply {
-//        putString("uri", stringFileUri)
-//    }
-
-
-
     private val cameraResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if(result.resultCode == RESULT_OK) {
             binding.imageView2.setImageURI(fileUri)
@@ -49,12 +42,6 @@ class CameraActivity : AppCompatActivity() {
         intent.putExtra("type", type)
         startActivity(intent)
     }
-
-//        val intent = Intent(application, namingFragment::class.java)
-//        intent.putExtra("uri",stringFileUri)
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCameraBinding.inflate(layoutInflater)

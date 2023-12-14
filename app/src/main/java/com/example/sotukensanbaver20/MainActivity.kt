@@ -38,22 +38,8 @@ class MainActivity : AppCompatActivity() {
             val navController = findNavController(R.id.fragmentContainerView)
             navController.navigate(R.id.illustratedFragment)
         }
-//              動物画面確認用
-//            navController.navigate(R.id.action_mainFragment_to_animalFragment)
     }
 
-    /*private val launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-        // Resultコードをチェック
-        if (result.resultCode == Activity.RESULT_OK) {
-            // インテントを取得
-            val intent = result.data
-            // 中身を取り出す
-            val category = intent?.getStringExtra("category")
-            //表示
-            Toast.makeText(this, category, Toast.LENGTH_SHORT)
-                .show()
-        }
-    }*/
     fun setTopText(text: Int) {
         binding.titleText.setText(text)
     }
