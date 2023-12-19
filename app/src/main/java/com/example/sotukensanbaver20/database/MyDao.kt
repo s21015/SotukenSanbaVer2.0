@@ -30,6 +30,9 @@ interface MyDao {
     @Query("SELECT * FROM my_table_name WHERE id = :id")
     fun getItem(id:Long): LiveData<MyEntity>
 
+    @Query("SELECT COUNT(*) FROM my_table_name WHERE type = 5")
+    fun getCount(): LiveData<Int>
+
     @Update
     suspend fun Update(myEntity: MyEntity)
 

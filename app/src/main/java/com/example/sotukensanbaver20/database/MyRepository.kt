@@ -27,6 +27,10 @@ class MyRepository(private val myDao: MyDao) {
         return myDao.getItem(id)
     }
 
+    fun getCount(): LiveData<Int> {
+        return myDao.getCount()
+    }
+
     @Suppress("RedundantSuspendModifier")
     @WorkerThread
     suspend fun insert(entity: MyEntity) {

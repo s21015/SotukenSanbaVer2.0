@@ -2,8 +2,12 @@ package com.example.sotukensanbaver20
 
 import android.app.AlertDialog
 import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.Color
+import android.graphics.Matrix
 import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -18,6 +22,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import java.io.FileNotFoundException
 
 class StatusFragment : Fragment() {
     private val args:StatusFragmentArgs by navArgs()
@@ -48,7 +53,8 @@ class StatusFragment : Fragment() {
                             )
                         }
                     })
-                    viewModel.delete(args.id)
+//                    viewModel.delete(args.id)
+                    viewModel.deleteAll()
                 }
                 .setNegativeButton("キャンセル") { dialog, which ->
                     // キャンセルボタンがクリックされたときの処理
@@ -60,9 +66,33 @@ class StatusFragment : Fragment() {
 
         viewModel.getItem(args.id).observe(viewLifecycleOwner, Observer { entities ->
             entities?.let {
-                binding.imageView2.setImageURI(Uri.parse(it.uri))
+                fun getBitmapFromUri(uri: String): Bitmap? {
+                    try {
+                        val bitmap = MediaStore.Images.Media.getBitmap(activity?.contentResolver, Uri.parse(it.uri))
+                        val matrix = Matrix()
+                        matrix.postRotate(90f)
+                        matrix.postScale(0.1f, 0.1f)
+                        val scaledBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.width, bitmap.height, matrix, false)
+                        return scaledBitmap
+                    } catch (e: FileNotFoundException) {
+                        // 画像が見つからない場合のエラー処理
+                        e.printStackTrace()
+                        return null
+                    }
+                }
+
+                val scaledBitmap = getBitmapFromUri(it.uri)
+
+                if (it.uri != null) {
+                    binding.imageView2.setImageBitmap(scaledBitmap)
+                }
                 binding.editText.setText(it.name)
                 binding.detailText.setText(it.detail)
+
+                if (it.type == 5) {
+                    binding.deleteBtn.visibility = View.INVISIBLE
+                    binding.imageView2.setBackgroundColor(Color.WHITE)
+                }
             }
         })
 
