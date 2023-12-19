@@ -44,6 +44,11 @@ class IllustratedFragment : Fragment() {
                 IllustratedFragmentDirections.actionIllustratedFragmentToRecyclerFragment(4)
             )
         }
+        binding.roleModelBtn.setOnClickListener {
+            Navigation.findNavController(it).navigate(
+                IllustratedFragmentDirections.actionIllustratedFragmentToRecyclerFragment(5)
+            )
+        }
 
         return binding.root
     }
