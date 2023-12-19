@@ -36,8 +36,10 @@ class CameraActivity : AppCompatActivity() {
         if(result.resultCode == RESULT_OK) {
             val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, fileUri)
             val matrix = Matrix()
-            matrix.postRotate(90f)
-            matrix.postScale(0.1f, 0.1f)
+            if (bitmap.width > 400 || bitmap.height > 400) {
+                matrix.postRotate(90f)
+            }
+            matrix.postScale(0.5f, 0.5f)
             val scaledBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.width, bitmap.height, matrix, false)
             binding.imageView2.setImageBitmap(scaledBitmap)
             binding.fragmentContainerView3.findNavController().navigate(
@@ -49,10 +51,12 @@ class CameraActivity : AppCompatActivity() {
     private val pickImageLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == RESULT_OK) {
             val selectedImageUri: Uri? = result.data?.data
-            val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, fileUri)
+            val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, selectedImageUri)
             val matrix = Matrix()
-            matrix.postRotate(90f)
-            matrix.postScale(0.1f, 0.1f)
+            if (bitmap.width > 400 || bitmap.height > 400) {
+                matrix.postRotate(90f)
+            }
+            matrix.postScale(0.5f, 0.5f)
             val scaledBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.width, bitmap.height, matrix, false)
             binding.imageView2.setImageBitmap(scaledBitmap)
             binding.fragmentContainerView3.findNavController().navigate(

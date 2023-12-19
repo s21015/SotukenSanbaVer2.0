@@ -53,5 +53,8 @@ class Put{
                 "夜行性で、冬季の約二ヶ月を除いてほぼ一年中活動している\n" +
                 "成虫の寿命は2〜5ヶ月ほど\n" +
                 "ヤシや、パイナップル、サトウキビの害虫としても有名\n"))
+        viewModel.insert(MyEntity(0,"ハイビスカス", 5, getResourceUri(context, R.drawable.hibiscus), "ハイビスカスは、ハワイ語では「アロアロ」と呼ばれる。"))
+        viewModel.insert(MyEntity(0,"サトウキビ", 5, getResourceUri(context, R.drawable.satoukibi), "かつてはサトウキビ発祥の地は、現在のニューギニア島あたりで、紀元前6000年前後に現在のインド、さらに東南アジアに広まったといわれている。"))
+        viewModel.insert(MyEntity(0,"ハブ", 5, getResourceUri(context, R.drawable.habu), "毒性はニホンマムシよりも弱いが、毒牙が1.5センチメートルと大型で毒量が100 - 300ミリグラムと多い。1回の咬傷にあたり平均22.5ミリグラム、最大103ミリグラムの毒液を排出する。"))
     }
 }
