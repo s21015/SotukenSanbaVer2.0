@@ -51,7 +51,11 @@ class MyAdapter : ListAdapter<MyEntity, MyAdapter.YourViewHolder>(YourDiffCallba
                     if (bitmap.width > 400 || bitmap.height > 400) {
                         matrix.postRotate(90f)
                     }
-                    matrix.postScale(0.5f, 0.5f)
+                    if (bitmap.width > 2000 || bitmap.height >2000) {
+                        matrix.postScale(0.25f, 0.25f)
+                    } else {
+                        matrix.postScale(0.5f, 0.5f)
+                    }
                     val scaledBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.width, bitmap.height, matrix, false)
                     return scaledBitmap
                 } catch (e: FileNotFoundException) {
