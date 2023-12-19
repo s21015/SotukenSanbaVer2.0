@@ -51,4 +51,5 @@
     <string name="deleteBtn">削除ボタン</string>
     <string name="countText">カウントテキスト</string>
     <string name="coutText">種類数表示</string>
+    <string name="roleModelBtn">沖縄の生き物ボタン</string>
 </resources>

@@ -48,8 +48,10 @@ class MyAdapter : ListAdapter<MyEntity, MyAdapter.YourViewHolder>(YourDiffCallba
                 try {
                     val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, Uri.parse(entity.uri))
                     val matrix = Matrix()
-                    matrix.postRotate(90f)
-                    matrix.postScale(0.1f, 0.1f)
+                    if (bitmap.width > 400 || bitmap.height > 400) {
+                        matrix.postRotate(90f)
+                    }
+                    matrix.postScale(0.5f, 0.5f)
                     val scaledBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.width, bitmap.height, matrix, false)
                     return scaledBitmap
                 } catch (e: FileNotFoundException) {
